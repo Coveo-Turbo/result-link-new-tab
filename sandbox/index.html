@@ -12,28 +12,21 @@
     <script src="component.js"></script>
     <!-- <script src="components/<name>.js"></script> -->
 
-    <link rel="stylesheet" href="assets/styles/salesforce-lightning-design-system.css" />
     <link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.8864/css/CoveoFullSearchNewDesign.css" />
     <link rel="stylesheet" href="component.css" />
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {    
+        document.addEventListener('DOMContentLoaded', function () {
+            CoveoResultLinkNewTab();
+
             Coveo.SearchEndpoint.configureCloudV2Endpoint(demoConfig.orgId, demoConfig.token, demoConfig.restUri);
             // Coveo.SearchEndpoint.endpoints['default'].options.queryStringArguments.viewAllContent = 'true';
             Coveo.init(document.getElementById('search'), {
-                Analytics: {
-                    searchHub: demoConfig.searchHub,
-                }
+              Analytics: {
+                searchHub: demoConfig.searchHub,
+              }
             });
-    
-            const standaloneSearchBoxRoot = document.querySelector('.CoveoSearchInterface');
-        
-            Coveo.initSearchbox(standaloneSearchBoxRoot, demoConfig.searchUrl, {
-                Analytics: {
-                    searchHub: demoConfig.searchHub,
-                },
-            });
-        })
+          })
     </script>
 </head>
 <body>

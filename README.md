@@ -34,7 +34,7 @@ export * as ResultLinkNewTab from '@coveops/result-link-new-tab'
 
 4. Include the component in your template as follows:
 
-Add the following script if you're serving the component independently via a CDN:
+Add the following execution to your code once the page has initialized:
 
 ```html
 <script>
@@ -42,7 +42,7 @@ Add the following script if you're serving the component independently via a CDN
 </script>
 ```
 
-Add the following script if you're serving the component from the project bundle using the `swapVar` utility:
+If the component is being bundled amongst other components, it will be available on the Coveo object.
 
 ```html
 <script>
