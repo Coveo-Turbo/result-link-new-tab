@@ -21,7 +21,12 @@
 
             Coveo.SearchEndpoint.configureCloudV2Endpoint(demoConfig.orgId, demoConfig.token, demoConfig.restUri);
             // Coveo.SearchEndpoint.endpoints['default'].options.queryStringArguments.viewAllContent = 'true';
-            Coveo.init(document.getElementById('search'), {
+            Coveo.init(document.getElementById('search1'), {
+              Analytics: {
+                searchHub: demoConfig.searchHub,
+              }
+            });
+            Coveo.init(document.getElementById('search2'), {
               Analytics: {
                 searchHub: demoConfig.searchHub,
               }
@@ -30,7 +35,7 @@
     </script>
 </head>
 <body>
-    <div id="search" class="CoveoSearchInterface" data-enable-history="true">
+    <div id="search1" class="CoveoSearchInterface" data-enable-history="true">
         <!-- <div class="CoveoFolding"></div> -->
         <div class="CoveoAnalytics"></div>
         <div class="coveo-tab-section">
@@ -117,6 +122,9 @@
             <div class="CoveoResultsPerPage"></div>
           </div>
         </div>
+    </div>
+    <div id="search2" class="CoveoSearchInterface" data-enable-history="true">
+      <div class="CoveoResultList" data-layout="list" data-wait-animation="fade" data-auto-select-fields-to-include="true">
     </div>
 </body>
 </html>
