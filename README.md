@@ -32,7 +32,15 @@ const ResultLinkNewTab = require('@coveops/result-link-new-tab');
 export * as ResultLinkNewTab from '@coveops/result-link-new-tab'
 ```
 
-4. Include the component in your template as follows:
+4. Or for quick testing, you can add the script from unpkg
+
+```html
+<script src="https://unpkg.com/@coveops/result-link-new-tab@latest/dist/index.min.js"></script>
+```
+
+> Disclaimer: Unpkg should be used for testing but not for production.
+
+5. Include the component in your template as follows:
 
 Add the following execution to your code once the page has initialized:
 
